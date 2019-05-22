@@ -14,23 +14,24 @@ public class Main {
 
         File input = new File("Test.txt");
 
-        readIn(input);
+        readAndSend(input);
 
 
     }
 
 
 
-    static void readIn(File buff){
+    static void readAndSend(File buff){
 
-
+        //Database connection url, username and password for database
         String db_con = "";
         String username = "";
         String password = "";
 
         PreparedStatement preparedStatement = null;
 
-        String insert = "INSERT INTO FINALS19"
+        //SQL insert statement
+        String insert = "INSERT INTO Database_Name_Goes_Here"
                 + "(Employee ID, First Name, Last Name, Department Name) VALUES"
                 + "(?,?,?,?)";
 
